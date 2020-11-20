@@ -1,0 +1,35 @@
+.footer{
+    height: 12vh;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px 5px 9px 6px #00000038;
+    background: white;
+}
+
+fa-icon{
+    font-size: 200%;
+    text-align: center;
+}
+
+fa-icon:hover{
+    font-size: 220%;
+    color: #007bff;
+}
+
+.badge{
+    top: 15%;
+    position: absolute;
+}
+
+a{
+    color: gray;
+}
+
+.active{
+    color: #007bff;
+}
+
+
+.tab1,.tab2,.tab3{
+   color: brown;
+ }

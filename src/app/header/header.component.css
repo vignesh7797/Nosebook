@@ -1,0 +1,7 @@
+.header{
+    height: 14vh;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 1px 9px 2px #00000038;
+    background: white;
+}

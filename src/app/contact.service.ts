@@ -12,13 +12,12 @@ export class ContactService {
   constructor(private http: HttpClient) { }
 
   getContacts(): Observable<Contact[]>{
-     const articles: Contact[] = CONTACTS;
-     return of(articles);
+     const contacts: Contact[] = CONTACTS;
+     return of(contacts);
   }
 
   getContact(user_name:string): Observable<Contact> {
-     const contact: Contact[] = CONTACTS.filter(a => a.user_name === user_name);
-     return of(contact[0]);
-
+     const contacts: Contact[] = CONTACTS.filter(a => a.user_name === user_name);
+     return of(contacts[0]);
    }
 }

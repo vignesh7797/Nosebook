@@ -4,4 +4,5 @@ export class Contact{
     dp='';
     status='';
     date: Date = new Date();
+    post:Array<String>;
 }

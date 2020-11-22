@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule, NgbAlertModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,8 +13,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgbModule, NgbAlertModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { ChatBoxComponent } from './chat-box/chat-box.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { NgbModule, NgbAlertModule, NgbPaginationModule } from '@ng-bootstrap/ng
     HeaderComponent,
     FooterComponent,
     BlogComponent,
-    ContactComponent
+    ContactComponent,
+    ChatBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,8 @@ import { NgbModule, NgbAlertModule, NgbPaginationModule } from '@ng-bootstrap/ng
     NgbModule, 
     NgbPaginationModule, 
     NgbAlertModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

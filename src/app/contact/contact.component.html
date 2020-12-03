@@ -1,8 +1,10 @@
-<app-header></app-header>
+
 
 <div class="contact container-fluid">
+
+
     <div *ngFor='let contact of contacts' class="contact-list">
-        <div  routerLink="/{{contact.user_name}}"  class="row user">
+           <div  routerLink="/{{contact.user_name}}"  class="row user">
             <div class="dp m-2">
                 <img [src]="contact.dp">
             </div>
@@ -16,5 +18,3 @@
         </div>
     </div>
 </div>
-
-<app-footer></app-footer>

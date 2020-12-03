@@ -1,0 +1,28 @@
+.profile{
+    margin-top: 12vh;
+    margin-bottom: 10vh;
+}
+
+.profile_img img{
+    width: 35vh;
+    height: 35vh;
+    border: 5px solid #007bff;
+    border-radius: 50%;
+}
+
+.profile_button button{
+    width: 22vw;
+    font-weight: 500;
+    border-radius: 14px;
+    font-size: 0.8em;
+    margin-right: 2vw !important;
+}
+
+.profile_media button{
+    width: 49vw;
+    height: 8vh;
+    font-weight: 500;
+}
+.profile_media .active{
+    box-shadow: 0px 7px 6px 1px #007bff52;
+}

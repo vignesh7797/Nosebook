@@ -15,6 +15,7 @@ export class ContactComponent implements OnInit {
 
   contacts: Contact[]=[];
   user=faUserCircle;
+  
 
   constructor(
     private contactService: ContactService,

@@ -1,2 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* @import '~@ctrl/ngx-emoji-mart/picker.css'; */
+
+@import '~@ctrl/ngx-emoji-mart/picker.css';
+
+/* Lightbox */
+
+@import '~lightbox2/dist/css/lightbox.min.css';
+
+::-webkit-scrollbar{
+    visibility: hidden;
+}

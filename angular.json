@@ -25,9 +25,15 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/@ctrl/ngx-emoji-mart/picker.css",
+              "node_modules/lightbox2/dist/css/lightbox.css"
             ],
-            "scripts": []
+            "scripts": [  
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js",
+              "node_modules/lightbox2/dist/js/lightbox.min.js"
+            ]
           },
           "configurations": {
             "production": {

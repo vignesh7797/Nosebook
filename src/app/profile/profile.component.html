@@ -1,0 +1,31 @@
+<div class="container-fluid profile">
+    <div class="profile_img row justify-content-center">
+        <img src="https://images.unsplash.com/photo-1588687508244-3a8eec1a0694?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=781&q=80">
+    </div>
+
+    <div class="profile_name row justify-content-center mt-4">
+        <h2 class="text-primary text-justify font-weight-bold">James Hamesworth</h2>
+    </div>
+    <div class="profile_name row justify-content-center">
+        <a href="#" class="text-primary text-justify  font-weight-normal">@james_hamesworth</a>
+    </div>
+    
+
+    <div class="profile_button row justify-content-center mt-3">
+        <button class="btn btn-primary mr-2">Follow</button>
+        <button class="btn border border-primary text-primary mr-2">Message</button>
+        <button class="btn border border-primary text-primary mr-2">Share</button>
+    </div>
+
+    <div class="profile_story row justify-content-center mt-3">
+        <p class="text-center text-primary">I am a Model <br>
+            I like Photography <br>
+            If you like my Posts Just follow me</p>
+    </div>
+
+    <div class="profile_media row justify-content-center">
+        <button class="btn text-primary" (click)="onClick(1)" [routerLink]=" ['./photo']" [ngClass]="{'active': tab ==='tab1'}">Photos</button>
+        <button class="btn text-primary" (click)="onClick(2)" [routerLink]=" ['./video']" [ngClass]="{'active': tab ==='tab2'}">Videos</button>
+    </div>
+    <router-outlet></router-outlet>
+</div>

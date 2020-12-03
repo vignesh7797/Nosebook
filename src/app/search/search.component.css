@@ -1,0 +1,36 @@
+.search{
+    margin-top: 12vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search_top{
+    font-weight: 500;
+    border-bottom: 2px dashed #007bff;
+    padding-bottom: 2vh;
+}
+
+.search_input{
+    border: 1px solid #007bff;
+    border-radius: 25px;
+}
+.search_input input{
+    border: none;
+    border-radius: 25px;
+    margin-left: 20px;
+    font-size: 1.2em;
+    width: 45vw;
+    color: #007bff;
+}
+
+.search_input input:focus{
+    outline: none;
+}
+
+.empty{
+    display: block;
+}
+
+.empty h2{
+    margin-top: 50%;
+    opacity: 70%;
+}

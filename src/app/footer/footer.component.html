@@ -2,11 +2,11 @@
 
     <div class="icons mx-auto row col-md-12">
 
-         <a routerLink="/" class="p-2 mx-auto" (click)="onClick(1)" [ngClass]="{'active': tab ==='tab1'}">
+         <a routerLink="/blog" class="p-2 mx-auto" (click)="onClick(1)" [ngClass]="{'active': tab ==='tab1'}">
             <fa-icon [icon]="home"></fa-icon>
         </a>
 
-        <a routerLink="/contacts" class="m-2 mx-auto" (click)="onClick(2)" [ngClass]="{'active': tab ==='tab2'}">
+        <a routerLink="/search" class="m-2 mx-auto"  (click)="onClick(2)" [ngClass]="{'active': tab ==='tab2'}">
             <fa-icon [icon]="search"></fa-icon>
         </a>
 
@@ -14,20 +14,14 @@
             <fa-icon [icon]="grid"></fa-icon>
         </a>
 
-        <a routerLink="/contacts" class="m-2 mx-auto" (click)="onClick(4)" [ngClass]="{'active': tab ==='tab4'}">
+        <a routerLink="/notification" class="m-2 mx-auto" (click)="onClick(4)" [ngClass]="{'active': tab ==='tab4'}">
             <fa-icon [icon]="bell"></fa-icon><span class="badge badge-danger">4</span>
         </a>
 
-        <a routerLink="/contacts" class="m-2 mx-auto" (click)="onClick(5)" [ngClass]="{'active': tab ==='tab5'}">
+        <a routerLink="/profile" class="m-2 mx-auto" (click)="onClick(5)" [ngClass]="{'active': tab ==='tab5'}">
             <fa-icon [icon]="profile"></fa-icon>
         </a> 
 
     </div>
-
-        
-
-    
-    
- 
 
 </div>

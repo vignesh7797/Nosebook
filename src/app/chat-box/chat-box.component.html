@@ -1,6 +1,103 @@
-<div class="navbar navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">
-        <img class="rounded-circle border border-success" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80" width="60" height="60" alt="" loading="lazy">
-      </a>
+<div class="navbar navbar-dark bg-primary fixed-top header chat-header">
+
+    <a routerLink="/contacts" class="back" (click)="Onback()">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+          </svg>
+    </a>
+
+    <a class="navbar-brand">
+        <img class="rounded-circle dp" [src]="contact.dp" width="60" height="60" alt="" loading="lazy">
+    </a>
+    <h3 class="text-white name">{{contact.user_name}}</h3>
+    
+    <div class="d-inline-block dropdown" ngbDropdown #myDrop="ngbDropdown">
+        <button class="btn  mr-2" id="dropdownManual" (focus)="myDrop.open()">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-three-dots-vertical text-white" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+            </svg>
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownManual" class="menu_panel">
+          <button ngbDropdownItem>View Profile</button>
+          <button ngbDropdownItem>Mute</button>
+          <button ngbDropdownItem>Media Files</button>
+          
+            <div class="d-inline-block dropdown" ngbDropdown #subDrop="ngbDropdown">
+                <button class="btn mr-2" id="dropdownManual" (focus)="subDrop.open()">
+                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-left-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                      </svg> More
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownManual" class="sub_menu_panel">
+                  <button ngbDropdownItem>Block</button>
+                  <button ngbDropdownItem>Delete Chat</button>
+                  <button ngbDropdownItem>Report Contact</button>
+                </div>
+              </div>
+          
+        </div>
+      </div>
 </div>
 
+
+<div class="fixed-bottom">
+
+  <div #msg class="msg">
+    <div class="container overflow-auto p-2 msgitem" *ngFor="let m of msgAry" #msgitem>
+      <div class="cloud float-right p-2">
+
+        <a  class="example-image-link m-1" 
+            [href]="m.send_img" 
+            data-lightbox="example-set" 
+            data-title="">
+            <img [src]="m.send_img" alt="" class="send_img p-1"> 
+        </a>
+        
+        <p class="text-center send_msg">{{m.send_msg}}</p>
+        <p class="text-right send_time">{{m.send_time | timeAgo }}</p> 
+
+      </div>
+
+    </div>
+  </div>
+  
+  <emoji-mart class="emoji-mart" set="facebook" 
+              [i18n]="{ search: 'Search', 
+              categories: { search: 'Results for Search', 
+              recent: 'Recents' } }"  
+              (emojiSelect)="addEmoji($event)" 
+              *ngIf="showEmojiPicker" 
+              title="Pick your emoji…">
+</emoji-mart>
+
+   
+
+
+  <div class="container-fluid">
+
+      <div class="input-group mb-3" (ngSubmit)="Onsend()">
+        <button class="btn toggle-emoji text-primary" type="button" (click)="toggleEmojiPicker()"><fa-icon [icon]="smile"></fa-icon></button>
+        
+        <div class="form-control input row ml-0 mr-2">
+          <input type="text" class="text-primary message" name="message" [(ngModel)]="message" (ngSubmit)="message" (input)="getMessageData($event)" placeholder="Write something to Your Friend.!" [placeholder]="imgPlace" autofocus (focus)="hideEmoji()">
+  
+            <input type="file" id="upload" class="attach" name="image" [(ngModel)]="image" (change)="fileProgress($event)" hidden>
+            <label for="upload" class="text-primary"><fa-icon [icon]="paper_clip"></fa-icon></label>
+          
+        </div>
+        
+        <div class="input-group-append">
+            <button class="btn send-btn" type="submit" (click)="Onsend()" [hidden]="hide"><fa-icon [icon]="send_icon"></fa-icon></button>
+          </div>
+      </div>
+
+  </div>
+  
+</div>
+
+<script>
+  lightbox.option({
+'resizeDuration': 50,
+'wrapAround': true,
+})
+</script>

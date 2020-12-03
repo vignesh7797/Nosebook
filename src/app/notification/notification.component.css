@@ -1,0 +1,18 @@
+img{
+    margin-top: 30vh;
+    width: 90vw;
+    align-items: center;
+    justify-items: center;
+}
+
+h5{
+    position: absolute;
+    top: 24vh;
+    left: 15%;
+}
+h1{
+    position: absolute;
+    top: 15vh;
+    left: 40vw;
+    font-family: fantasy;
+}

@@ -1,0 +1,144 @@
+
+:root{
+    --fit:fit-content;
+}
+
+.chat-header{
+    z-index: 10000;
+}
+
+.dp{
+    border: 5px Solid #0ae763;
+}
+
+.back{
+    font-size: 2.5em;
+    color: white;
+}
+
+.name{
+    width:50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.menu_panel{
+    top:150%;
+    left: -200%;
+}
+
+.menu_panel button{
+    font-size: 150%;
+    font-weight: 500;
+}
+
+.sub_menu_panel{
+    top: 0%;
+    left: -150%;
+}
+
+.send_icon{
+    font-size: xx-large;
+}
+
+.input{
+    font-size: 22px;
+    font-weight: 400;
+    border-radius: 50px !important;
+    border-color: #007bff;
+}
+
+.message:focus{
+    outline:none !important;
+    border: none !important;
+    -moz-outline-style: none !important;
+}
+
+.input .message{
+    width:90% !important;
+    border: none;
+    border-radius: 50px !important;
+}
+
+.send-btn{
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 35% !important;
+    font-size: 1.5em;
+}
+
+.msg{
+    max-height: 80vh;
+    overflow: scroll;
+}
+
+
+.cloud {
+    padding: 1% 5% 0 5%;
+    border-radius: 20px 20px 0 20px;
+    background: #007bff;
+    color: #ffffff;
+    width: var(--fit);
+    transition: 0.5s linear;
+    animation: pop 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.send_msg{
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 0px !important;
+    max-width: 70vw;
+    word-wrap: break-word;
+}
+.send_time{
+    font-size: 12px;
+    margin-bottom: -1%;
+    color: #8dc4ff;
+}
+
+.send_img{
+    width: 70vw;
+    border-radius: 20px 20px 0 20px;
+}
+
+@keyframes pop{
+    0% {
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+      }
+      50% {
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+      }
+      100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+      }
+    
+}
+
+.emoji-mart{
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+}
+
+.toggle-emoji {
+    font-size: 1.5em;
+  }
+
+.paper_clip{
+    font-size: 1.5em;
+}
+  
+.attach{
+    opacity: 0;
+    position: absolute;
+    left:75%;
+}
+
+.input label{
+    margin-left:2%;
+}

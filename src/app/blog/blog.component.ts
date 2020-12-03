@@ -45,12 +45,13 @@ export class BlogComponent implements OnInit {
     this.getPosts();
   }
 
-  onLike(){
+
+  onLike(id:number){
+    const i = id;
     this.like = ! this.like;
     if(this.like){ this.count++ } else this.count-- ;
   }
 
- 
 
   getContacts(): void{
     this.contactService.getContacts().subscribe(contacts => {
@@ -70,12 +71,10 @@ export class BlogComponent implements OnInit {
       return this.posts;
     });
 
-    console.log(this.posts[1].user_name);
-    if(this.posts[1].user_name == this.contacts[1].user_name){
-      console.log(this.contacts[1].dp);
-    }
-    
   }
+
+ 
+    
 
 
  

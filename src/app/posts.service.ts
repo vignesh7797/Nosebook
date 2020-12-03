@@ -22,7 +22,6 @@ export class PostsService {
   getPost(user_name:string): Observable<post> {
     const posts: post[] = POSTS.filter(a => a.user_name === user_name);
     return of(posts[0]);
-
   }
 
 }

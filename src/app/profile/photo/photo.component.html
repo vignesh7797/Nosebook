@@ -1,0 +1,23 @@
+
+<div class="profile_img row mt-3">
+
+    <div  *ngFor='let img of Images'>
+
+        <a  class="example-image-link m-1" 
+            [href]="img.imgPath" 
+            data-lightbox="example-set" 
+            data-title="">
+                <img class="example-image mb-1" [src]="img.imgPath"/>
+        </a>
+
+    </div>
+
+</div>
+
+
+<script>
+     lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true
+})
+</script>

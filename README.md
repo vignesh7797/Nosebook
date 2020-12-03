@@ -5,6 +5,32 @@ And this app has only FrontEnd logics.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
+## PreView Images
+
+### Front Page
+![alt text](https://github.com/vignesh7797/Nosebook/blob/master/src/assets/preview_1.PNG?raw=true)
+
+### Blogger page
+![alt text](https://github.com/vignesh7797/Nosebook/blob/master/src/assets/preview_2.PNG?raw=true)
+
+### Search Page
+![alt text](https://github.com/vignesh7797/Nosebook/blob/master/src/assets/preview_3.PNG?raw=true)
+
+### Contacts Page
+![alt text](https://github.com/vignesh7797/Nosebook/blob/master/src/assets/preview_4.PNG?raw=true)
+
+### Profile Page
+![alt text](https://github.com/vignesh7797/Nosebook/blob/master/src/assets/preview_5.PNG?raw=true)
+
+### ChatBox
+![alt text](https://github.com/vignesh7797/Nosebook/blob/master/src/assets/preview_6.PNG?raw=true)
+
+### ChatBox with Emojis
+![alt text](https://github.com/vignesh7797/Nosebook/blob/master/src/assets/preview_7.PNG?raw=true)
+
+### ChatBox with image
+![alt text](https://github.com/vignesh7797/Nosebook/blob/master/src/assets/preview_8.PNG?raw=true)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

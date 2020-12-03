@@ -1,5 +1,8 @@
 # Nosebook
 
+This is the Social Networking App, which is Developed with Angular 10.
+And this app has only FrontEnd logics.  
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 ## Development server
